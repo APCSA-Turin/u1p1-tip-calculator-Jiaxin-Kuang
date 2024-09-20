@@ -8,11 +8,6 @@ public class TipCalculator {
         //your code here
 
         //I learned how to round from https://coreui.io/blog/how-to-round-a-number-to-two-decimal-places-in-javascript/#:~:text=Another%20method%20to%20round%20to,then%20dividing%20back%20by%20100.&text=This%20method%20ensures%20the%20result,the%20essence%20of%20mathematical%20operations.
-        /*double tip = (Math.round(cost*(percent/100.0)*100.0))/100.0;
-        double billWithTip = cost + tip;
-        double costPerPerson = (Math.round(cost/people * 100.0))/100.0;
-        double tipPerPerson =  (Math.round(tip/people * 100.0))/100.0;
-        double totalPerPerson = (Math.round((billWithTip/people) * 100.0))/100.0;*/
         double tip = cost*(percent/100.0);
         double tipRounded = (Math.round(tip*100.0))/100.0;
         double billWithTip = cost + tipRounded;
