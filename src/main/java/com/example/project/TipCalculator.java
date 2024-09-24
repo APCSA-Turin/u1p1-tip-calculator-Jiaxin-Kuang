@@ -5,9 +5,10 @@ public class TipCalculator {
     public static String calculateTip(int people, int percent, double cost) { //You must use these  variable in your calculations
         //DO NOT DELETE ANY OF THE CODE BELOW      
         StringBuilder result = new StringBuilder();
+        
         //your code here
-
         //I learned how to round from https://coreui.io/blog/how-to-round-a-number-to-two-decimal-places-in-javascript/#:~:text=Another%20method%20to%20round%20to,then%20dividing%20back%20by%20100.&text=This%20method%20ensures%20the%20result,the%20essence%20of%20mathematical%20operations.
+        //Calculations for tip, total bill before tip, cost per person, tip per person, and total per person
         double tip = cost*(percent/100.0);
         double tipRounded = (Math.round(tip*100.0))/100.0;
         double billWithTip = cost + tipRounded;
@@ -18,6 +19,7 @@ public class TipCalculator {
         double totalPerPerson = (cost + tip)/people;
         totalPerPerson = (Math.round(totalPerPerson*100.0))/100.0;
 
+        //Prints out tip, total bill before tip, cost per person, tip per person, and total per person
         result.append("-------------------------------\n");
         result.append("Total bill before tip: " + "$" + cost + "\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
         result.append("Total percentage: " + percent + "%\n");
@@ -27,7 +29,6 @@ public class TipCalculator {
         result.append("Tip per person: " + "$" + tipPerPerson + "\n");
         result.append("Total cost per person: " + "$" + totalPerPerson + "\n");
         result.append("-------------------------------\n");
-
 
         return result.toString();
     }
